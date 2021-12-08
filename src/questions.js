@@ -1,31 +1,3 @@
-const mysql = require('mysql2');
-const { promisify } = require('util');
-
-const db = mysql.createConnection(
-    {
-      host: 'localhost',
-      // MySQL username,
-      user: 'root',
-      // TODO: Add MySQL password
-      password: '',
-      database: 'company_db'
-    },
-    console.log(`Connected to the company_db database.`)
-  );
-//const dbQueryAsync = promisify(db.query);// not sure if this should be used to make it a promise
-
-const departments = async () => {
-    const table = await db.query('SELECT name FROM department ',  (err, results) => {
-        if (err) {
-            console.log(err);
-        } else {
-            const departmentTable = results;
-            return(departmentTable);
-        }
-});
-return table;
-}
-
 const questions = {
     main: [
         {
@@ -46,7 +18,7 @@ const questions = {
         {
             name: 'roleName',
             type: 'input',
-            message: 'What is the new department name?',
+            message: 'What is the new role name?',
         },
         {
             name: 'roleSalary',
@@ -57,7 +29,7 @@ const questions = {
             name: 'roleDepartment',
             type: 'list',
             message: 'Which department does the role belong too?',
-            choices: departments()// insert a variable assigned to the array of departments loaded from the db
+            choices: []// insert a variable assigned to the array of departments loaded from the db
         }
     ],
     addEmployee: [
@@ -76,6 +48,12 @@ const questions = {
             type: 'input',
             message: 'What is the new employee\'s role?',
         },
+        {
+            name: 'employeeManager',
+            type: 'list',
+            message: 'Who is the employee\'s manager?',
+            choices: []
+        },// add a questions for add a managers and then have an option for none that sets manager to null for that employeee
     ],
 }
 
