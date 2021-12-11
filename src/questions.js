@@ -45,15 +45,30 @@ const questions = {
         },
         {
             name: 'employeeRole',
-            type: 'input',
+            type: 'list',
             message: 'What is the new employee\'s role?',
+            choices: []
         },
         {
             name: 'employeeManager',
             type: 'list',
             message: 'Who is the employee\'s manager?',
             choices: []
-        },// add a questions for add a managers and then have an option for none that sets manager to null for that employeee
+        },
+    ],
+    updateEmployee: [
+        {
+            name: 'chooseEmployee',
+            type: 'list',
+            message: 'Which employee would you like to update?',
+            choices: []
+        },
+        {
+            name: 'chooseRole',
+            type: 'list',
+            message: 'What is the employee\'s new role?',
+            choices: []
+        },
     ],
 }
 
