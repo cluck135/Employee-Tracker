@@ -173,7 +173,6 @@ async function start() {
 
                     break;
                 default: console.log('Program ended!');
-
             }
         })
 
