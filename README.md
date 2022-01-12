@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 ## Description
-A javascript project using terminal to manager and change a database in SQL
+A javascript project using terminal to manage and change a database in SQL
 
 ## Table of Contents
 - [Installation Instructions](#installation-instructions)
@@ -20,18 +20,17 @@ npm i inquirer
 ```
 
 ## Usage Information
-To create a read me for your repository!
-
-## Contribution Guidelines
-Open Source
-
-## Test Instructions
 ```
 mysql -uroot 
 source schema.sql
 source seeds.sql
-node server.js 
+npm start
 ```
+## Contribution Guidelines
+Open Source
+
+## Test Instructions
+N/A
 
 ## License
 This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license
