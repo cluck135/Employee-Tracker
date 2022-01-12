@@ -23,18 +23,17 @@ npm i inquirer
 ```
 
 ## Usage Information
-To create a read me for your repository!
-
-## Contribution Guidelines
-Open Source
-
-## Test Instructions
 ```
 mysql -uroot 
 source schema.sql
 source seeds.sql
-node server.js 
+npm start
 ```
+## Contribution Guidelines
+Open Source
+
+## Test Instructions
+N/A
 
 ## License
 This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license
